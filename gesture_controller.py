@@ -157,6 +157,7 @@ class RPSGestureController:
             'y': index_finger_tip.y,
             'is_clicking': is_pinching
         }
+
     async def handler(self, websocket):
         logging.info("New client connected")
         self.websocket = websocket
@@ -336,8 +337,6 @@ class RPSGestureController:
             cap.release()
             cv2.destroyAllWindows()
 
-
-
-
+if __name__ == "__main__":
     controller = RPSGestureController()
     controller.start()
